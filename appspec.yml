@@ -2,20 +2,22 @@ version: 0.0
 os: linux
 
 files:
-  - source: /index.html
+  - source: /
     destination: /var/www/html/
   - source: cards/
     destination: /var/www/html/cards/
+  - source: scripts/
+    destination: /home/ec2-user/scripts/
 
 hooks:
   AfterInstall:
-    - location: scripts/install_dependencies  # Correct relative path
+    - location: /home/ec2-user/scripts/install_dependencies
       timeout: 300
       runas: root
-    - location: scripts/start_server  # Correct relative path
+    - location: /home/ec2-user/scripts/start_server
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: scripts/stop_server  # Correct relative path
+    - location: /home/ec2-user/scripts/stop_server
       timeout: 300
       runas: root
