@@ -12,7 +12,7 @@ files:
 
 hooks:
   AfterInstall:
-    - location: /home/ec2-user/scripts/install_dependencies
+    - location: /home/ec2-user/scripts/install_dependencies/fjkdm
       timeout: 300
       runas: root
     - location: /home/ec2-user/scripts/start_server
