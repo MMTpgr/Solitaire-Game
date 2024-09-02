@@ -19,6 +19,6 @@ hooks:
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: /home/ec2-user/scripts/stop_server/kjbhvg
+    - location: /home/ec2-user/scripts/stop_server
       timeout: 300
       runas: root
