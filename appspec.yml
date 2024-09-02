@@ -21,3 +21,5 @@ hooks:
     - location: /home/ec2-user/scripts/stop_server
       timeout: 300
       runas: root
+
+      
